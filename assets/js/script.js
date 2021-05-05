@@ -1,6 +1,23 @@
 var resultTextEl = document.querySelector('#result-text');
 var resultContentEl = document.querySelector('#result-content');
 var searchFormEl = document.querySelector('#search-form');
+var cityList = [];
+
+function getLocalStorage(){
+  // We want to get the cities from the local storage, if there are any
+  // This also populates the data object
+  cityList = JSON.parse(localStorage.getItem("cityList"));
+  if (cityList !== null) {
+      // cityEl holds all of the divs with the class of "description"
+      var cityEl = document.querySelector('.history');
+      // Add the data to the list
+      for (var i = 0; i < cityList.length; i++) {
+          // The children of these particular divs need to be clickable elements
+          cityEl[i].children[0].value = cityList[i]; 
+      }
+  }
+}
+
 
 function getParams() {
   // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
