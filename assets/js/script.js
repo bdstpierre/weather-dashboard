@@ -67,7 +67,7 @@ function printTodayResults(city, resultObj) {
     currentEl.removeChild(currentEl.firstChild);
   }
 
-  currentEl.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
+  currentEl.classList.add('card', 'w-100', 'bg-light', 'text-dark', 'mb-3', 'p-3');
 
   // Create the current weather header
   var currentHeader = document.createElement('div');
@@ -83,7 +83,7 @@ function printTodayResults(city, resultObj) {
   mediaBody.append(titleHeader);
   
   var titleIcon = document.createElement('img');
-  titleIcon.classList.add('float-right', 'img-thumbnail', 'mr-3');
+  titleIcon.classList.add('img-thumbnail', 'mr-3');
   titleIcon.src = "http://openweathermap.org/img/wn/"+resultObj.current.weather[0].icon+"@2x.png";
 
   mediaContent.append(mediaBody, titleIcon);
@@ -123,7 +123,7 @@ function printTodayResults(city, resultObj) {
     fivedayEl.removeChild(fivedayEl.firstChild);
   }
 
-  fivedayEl.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
+  fivedayEl.classList.add('card', 'w-100', 'bg-light', 'text-dark', 'mb-3', 'p-3');
 
   // Create the heading for the five day forecast block
   var fivedayHeader = document.createElement('div');
@@ -135,10 +135,11 @@ function printTodayResults(city, resultObj) {
   // Create the container for the five forecast cards
   var fiveGroupEl = document.createElement('div');
   fiveGroupEl.classList.add('row');
+
   for (var i = 1; i <= 5; i++){
     // Create and populate each card
     var fiveCard = document.createElement('div');
-    fiveCard.classList.add( 'card', 'bg-dark', 'text-light', 'p-3', 'm-3')  
+    fiveCard.classList.add( 'card', 'w-20', 'bg-dark', 'text-light', 'p-3', 'm-3')  
     // Create the date header
     var date = moment.unix(resultObj.daily[i].dt + resultObj.timezone_offset).format("M/D/YYYY");
     cardHeader = document.createElement('div');
