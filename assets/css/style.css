@@ -15,3 +15,52 @@ h6 {
 .jumbotron {
   background-image: linear-gradient(to right, blue, darkblue);
 }
+
+.uvi-low {
+  background-color: green;
+  color: white;
+  border: 1px outset black;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 3px 8px;
+}
+
+.uvi-moderate {
+  background-color: yellow;
+  color: black;
+  border: 1px outset black;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 3px 8px;
+
+}
+
+.uvi-high {
+  background-color: orange;
+  color: black;
+  border: 1px outset black;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 3px 8px;
+
+}
+
+.uvi-veryHigh {
+  background-color: red;
+  color: white;
+  border: 1px outset black;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 3px 8px;
+
+}
+
+.uvi-extreme {
+  background-color: purple;
+  color: white;
+  border: 1px outset black;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 3px 8px;
+
+}
